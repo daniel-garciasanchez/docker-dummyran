@@ -46,7 +46,7 @@ RUN cp /root/srsLTE/srsue/ue.conf.fauxrf.example /config/ue.conf.fauxrf
 RUN sed -i s,"opc  = 63BFA50EE6523365FF14C1F45F88737D","#opc  = 63BFA50EE6523365FF14C1F45F88737D",g /config/ue.conf.fauxrf
 
 # Commenting expert variable not working
-RUN sed -i s,"bnof_phy_threads","#bnof_phy_threads",g /config/ue.conf.fauxrf
+RUN sed -i s,"nof_phy_threads","#nof_phy_threads",g /config/ue.conf.fauxrf
 
 # network tools we might need
 RUN apt-get --no-install-recommends -qy install iproute2 tcpdump net-tools iperf iperf3
